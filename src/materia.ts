@@ -1,16 +1,10 @@
-import  { alumno }  from "./alumno";
-export class materia{
-    nombre: string;
-    idAlumnoMatriculado?: number;
+export class Materia {
+    private static contadorId: number = 1;
+    public idMateria: number;
+    public nombre: string;
 
-    constructor(nombre: string, alumno?: alumno){
+    constructor(nombre: string) {
+        this.idMateria = Materia.contadorId++;
         this.nombre = nombre;
-        this.idAlumnoMatriculado = alumno?.idAlumno
     }
-
-    public get getNombre() : string {
-        return this.nombre;
-    }
-    
-    
 }
