@@ -17,12 +17,12 @@ export class Alumno {
 
     // Asignar una materia al alumno
     public asignarMateria(materia: Materia) {
-        this.materias[this.materias.length] = { materia, nota: null }; // Usar índice para añadir
+        this.materias[this.materias.length] = { materia, nota: null }; 
     }
 
     // Asignar una nota a una materia específica del alumno
-    public asignarNota(materiaId: number, nota: number) {
-        const materiaAsignada = this.materias[materiaId - 1]; // Acceso por índice
+    public asignarNota(idMateria: number, nota: number) {
+        const materiaAsignada = this.materias[idMateria - 1]; 
         if (materiaAsignada) {
             materiaAsignada.nota = nota;
         }
