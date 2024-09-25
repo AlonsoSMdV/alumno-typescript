@@ -31,12 +31,12 @@ export class Alumno {
     // Listar todas las materias del alumno
     public listarMaterias(): void {
         if (this.materias.length === 0) {
-            console.log('${this.nombre} no tiene materias asignadas.');
+            console.log(`${this.nombre} no tiene materias asignadas.`);
         } else {
-            console.log('Materias de ${this.nombre}:');
+            console.log(`Materias de ${this.nombre}:`);
             for(const m of this.materias) {
-                const notaTexto = m.nota !== null ? 'Nota: ${m.nota}' : 'Sin nota';
-                console.log('- ${m.materia.nombre} (${notaTexto})');
+                const notaTexto = m.nota !== null ? `Nota: ${m.nota}` : 'Sin nota';
+                console.log(`- ${m.materia.nombre} (${notaTexto})`);
             };
         }
     }
